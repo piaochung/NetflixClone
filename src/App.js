@@ -1,26 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import MainPage from './page/MainPage';
+import LoginPage from './page/LoginPage';
+import LogoutPage from './page/LogoutPage';
+import { HashRouter, Route, Router } from 'react-router-dom';
+import Auth from './server/Auth';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<HashRouter>
+			<Route exact path="/logout" component={Auth(LogoutPage, true)} />
+			<Route exact path="/main" component={Auth(MainPage, true)} />
+			<Route exact path="/" component={Auth(LoginPage, true)} />
+		</HashRouter>
+	);
 }
 
 export default App;
