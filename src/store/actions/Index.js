@@ -8,7 +8,7 @@ export const FETCH_HORROR_MOVIES = 'FETCH_HORROR_MOVIES';
 export const FETCH_ROMANCE_MOVIES = 'FETCH_ROMANCE_MOVIES';
 export const FETCH_DOCUMENTARIES = 'FETCH_DOCUMENTARIES';
 
-const API_KEY = '887ae0880ad846d24f3dd78103bd8d7d';
+const API_KEY = '';
 const BASE_URL = 'https://api.themoviedb.org/3';
 
 export const fetchTrendData = (data) => {
